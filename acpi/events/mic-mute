@@ -1,0 +1,9 @@
+# Trigger for mic mute
+# Hhandles Fn+F4 key
+
+# FIXME: If there is a way to set multiple events 
+# with a single action, let me know
+
+# Mic mute button on ThinkPad t550
+event=button/f20 
+action=/etc/acpi/actions/volume-control.sh "%e"

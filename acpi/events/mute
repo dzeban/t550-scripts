@@ -1,0 +1,10 @@
+# Trigger for mute button
+# Hhandles Fn+F1 key
+
+# FIXME: If there is a way to set multiple events 
+# with a single action, let me know
+
+# Volume mute
+event=button/mute
+action=/etc/acpi/actions/volume-control.sh "%e"
+

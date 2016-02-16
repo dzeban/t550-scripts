@@ -1,0 +1,9 @@
+# Triggers for volume control
+# Hhandles Fn+F2,F3 keys, that control volume
+
+# FIXME: If there is a way to set multiple events 
+# with a single action, let me know
+
+# Volume up/down
+event=button/volume*
+action=/etc/acpi/actions/volume-control.sh "%e"
