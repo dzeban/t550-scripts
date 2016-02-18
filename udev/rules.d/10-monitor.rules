@@ -1,1 +1,1 @@
-ACTION=="change", SUBSYSTEM=="drm", RUN+="/usr/local/bin/monitor-hotplug.sh %p"
+ACTION=="change", SUBSYSTEM=="drm", RUN+="/etc/udev/scripts/monitor-hotplug.sh %p"
