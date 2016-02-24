@@ -13,13 +13,29 @@ To accomplish such bold goals this scripts relies on ACPI and udev notifications
 Installation
 ------------
 
+### DO THIS
+
+Before installing this scripts you should revise and **adjust** to your
+configuration a few things:
+
+1. Layout files in `layout/`. There should be script for each number of monitors
+   you would have. Usually, it's 1 monitor (laptop's eDP1) and 2 monitors
+   (laptop + external monitor). So there are 1.sh and 2.sh accordingly.
+
+   You **must** use `arandr` or something like this to generate **your**
+   configuration and "Save as" it to script that you'll put in `layout` dir.
+
+2. Review xorg.conf.d/10-monitor.conf and **adjust** it to your needs.
+3. Configure PulseAudio socket for accepting connections from root (see below)
+4. (TODO: will fix) Configure SELinux workaround (see below)
+
 ### SELinux workaround
 
 Currently, selinux denies access from acpid scripts to access almost everything.
-For now, I'm suggesting set "SELINUX=permissive" in /etc/selinux/config, until I
-figure out correct policy changes for acpid.
+For now, I'm suggesting set "SELINUX=permissive" in /etc/selinux/config or
+`sudo setenforce 0`, until I figure out correct policy changes for acpid.
 
-If you want to contribute, this is what you should try to do.
+If you want to contribute, this is what you should try to fix.
 
 ### PulseAudio configuration
 
